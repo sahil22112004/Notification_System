@@ -1,7 +1,7 @@
 'use client'
 
 import axios, { AxiosInstance } from "axios";
-import { logoutUser } from "../redux/slices/authSlice";
+import { logoutUser } from "./auth/authSlice";
 
 let store: any;
 

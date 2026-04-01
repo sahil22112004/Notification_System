@@ -10,9 +10,6 @@ export class GoogleAuthDto {
     @IsString({message:'firebase id enter only string'})
     firebase_id:string
 
-    @IsString({message:'token enter only string'})
-    token:string
-
     @IsString({message:'full name enter only string'})
     fullname:string
 

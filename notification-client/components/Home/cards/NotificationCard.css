@@ -1,0 +1,27 @@
+.notification-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    border-left: 4px solid #3b82f6;
+    transition: transform 0.2s ease-in-out;
+}
+
+.notification-card:hover {
+    transform: translateX(3px);
+}
+
+.notification-message {
+    font-size: 0.95rem;
+    color: #333;
+    margin: 0;
+}
+
+.notification-time {
+    display: block;
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 0.5rem;
+    text-align: right;
+}

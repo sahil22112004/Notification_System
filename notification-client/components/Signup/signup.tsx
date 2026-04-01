@@ -3,14 +3,14 @@
 import React, { useEffect, useState } from 'react';
 import {  Button, Typography } from '@mui/material';
 import { signInWithPopup } from 'firebase/auth';
-import { auth, googleProvider } from '../firebase/firebase';
+import { auth, googleProvider } from '../../config/firebase/firebase';
 import { FcGoogle } from "react-icons/fc";
 import './signup.css';
 import { useRouter } from 'next/navigation';
 import { useSnackbar } from 'notistack';
 import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../redux/store';
-import {  googleLogin } from '../redux/slices/authSlice';
+import { AppDispatch, RootState } from '../../redux/store';
+import {  googleLogin } from '../../redux/auth/authSlice';
 
 
 export default function Login() {

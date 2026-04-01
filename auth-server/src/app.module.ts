@@ -6,6 +6,8 @@ import { User } from './domain/entities/user.entity';
 import { config } from "dotenv";
 import { userModule } from './feature/user/user.module';
 import { authModule } from './feature/auth/auth.module';
+import { Follow } from './domain/entities/follow.entity';
+import { LiveStream } from './domain/entities/livestream.entity';
 
 
 config()
@@ -19,7 +21,7 @@ config()
       username: process.env.DB_USERNAME,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DATABASE,
-      entities: [User],
+      entities: [User,Follow,LiveStream],
       synchronize: false,
     }),
     authModule,

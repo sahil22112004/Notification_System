@@ -10,7 +10,7 @@ import { JwtModule } from '@nestjs/jwt';
 @Module({
   imports: [TypeOrmModule.forFeature([User]),
   JwtModule.register({
-    secret: process.env.JWT_SECRET || 'supersecret',
+    secret: process.env.JWT_SECRET || 'secret',
   }),],
   controllers: [GoogleLoginController, LogoutUserController],
   providers: [GoogleLoginService],

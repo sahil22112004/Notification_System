@@ -3,7 +3,7 @@ import { fetchCreatorService } from './fetchCreator.service';
 import { JwtAuthGuard } from '../../../infrastructure/auth-gaurd/authGaurd';
 
 @Controller('fetchAllProfile')
-export class fetchALLProfileController {
+export class fetchCreatorController {
   constructor(private readonly fetchCreatorService: fetchCreatorService) {}
 
   @Get()
@@ -12,3 +12,29 @@ export class fetchALLProfileController {
     return this.fetchCreatorService.fetchCreators(req.user)
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

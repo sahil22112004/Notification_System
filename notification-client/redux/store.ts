@@ -11,8 +11,8 @@ import {
   REGISTER,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import authReducer from "./slices/authSlice";
-import { injectStore } from "../service/interceptor";
+import authReducer from "./auth/authSlice";
+import { injectStore } from "./interceptor";
 
 
 
