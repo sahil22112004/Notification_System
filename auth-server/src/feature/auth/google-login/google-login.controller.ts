@@ -13,6 +13,7 @@ export class GoogleLoginController {
     @Res({ passthrough: true }) res: Response
   ) {
     const response = await this.googleLoginService.registerUser(dto);
+    console.log("res is ",response)
 
     if (response.token) {
       res.cookie('token', response.token, {

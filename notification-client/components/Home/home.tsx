@@ -26,12 +26,7 @@ const HomeComponent = () => {
         <div className="home-container">
             <div className="left-block">
                 <div className="sticky-container">
-                    <UserInfo
-                        username="Sahil"
-                        following={124}
-                        followers={1025}
-                        coverColor="#3498db"
-                    />
+                    <UserInfo/>
                 </div>
             </div>
 

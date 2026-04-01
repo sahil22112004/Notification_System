@@ -15,8 +15,8 @@ export class LiveStream {
     url: string;
 
     @Column()
-    start_Time: string;
+    start_Time: Date;
 
     @CreateDateColumn()
-    followedAt: Date;
+    createdAt: Date;
 }

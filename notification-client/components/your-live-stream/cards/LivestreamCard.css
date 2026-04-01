@@ -1,0 +1,67 @@
+.livestream-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #eee;
+    transition: transform 0.2s ease-in-out;
+}
+
+.livestream-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.livestream-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card-username {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #3182ce;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.start-time {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+.stream-link {
+    text-decoration: none;
+    color: #3182ce;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: right;
+    transition: color 0.3s ease;
+}
+
+.stream-link:hover {
+    color: #2c5282;
+    text-decoration: underline;
+}

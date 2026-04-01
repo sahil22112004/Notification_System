@@ -5,7 +5,9 @@ export interface User {
   id?: string;
   firebase_id: string;
   email: string;
-  fullname?: string | null;
+  fullName?: string | null;
+  role: string
+  createdAt:Date
 }
 
 interface AuthState {

@@ -19,6 +19,14 @@ export default function Login() {
     const dispatch = useDispatch<AppDispatch>();
     const [showPassword, setShowPassword] = useState(false);
     const { loading, isLoggedIn, currentUser, error } = useSelector((state: RootState) => state.auth)
+    useEffect(()=>{
+        if(isLoggedIn){
+            router.push('/')
+        }
+        if(error){
+            enqueueSnackbar(error, { variant: "error" })
+        }
+    },[error,isLoggedIn])
 
 
     const googleSign = async () => {

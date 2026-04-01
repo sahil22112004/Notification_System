@@ -10,7 +10,7 @@ export class GoogleLoginService {
         private dataSource: DataSource,
         private readonly jwtService: JwtService,
 
-    ) {}
+    ) { }
 
     async registerUser(dto: GoogleAuthDto) {
         return this.dataSource.transaction(async (manager) => {
@@ -19,24 +19,41 @@ export class GoogleLoginService {
             const { email, firebase_id, fullname } = dto;
 
             const existingUser = await userRepository.findOne({
-                where: { firebase_id },
+                where: { email },
             });
 
+
             if (existingUser) {
+                const payload = {
+                    id: existingUser.id,
+                    firebase_id: existingUser.firebase_id,
+                    email: existingUser.email,
+                    fullname: existingUser.fullName
+
+                }
+                const token = await this.jwtService.signAsync(payload);
                 return {
                     message: 'login successfully',
                     user: existingUser,
+                    token
+
                 };
             }
 
             const newUser = userRepository.create({
                 firebase_id,
                 email,
-                fullName:fullname
+                fullName: fullname
             });
 
             const savedUser = await userRepository.save(newUser);
-            const token = await this.jwtService.signAsync(savedUser);
+            const payload = {
+                id: savedUser.id,
+                firebase_id: savedUser.firebase_id,
+                email: savedUser.email,
+                fullname: savedUser.fullName
+            }
+            const token = await this.jwtService.signAsync(payload);
 
             return {
                 message: 'user register successfully',

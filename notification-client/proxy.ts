@@ -27,9 +27,9 @@ export default async function proxy(req: NextRequest) {
   if (
     isPublicRoute &&
     isAuthenticated &&
-    !req.nextUrl.pathname.startsWith('/')
+    !req.nextUrl.pathname.startsWith('/home')
   ) {
-    return NextResponse.redirect(new URL('/', req.nextUrl))
+    return NextResponse.redirect(new URL('/home', req.nextUrl))
   }
  
   return NextResponse.next()
